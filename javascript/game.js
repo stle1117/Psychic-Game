@@ -23,7 +23,7 @@ startNewGame()
 document.addEventListener('keypress', function(event){
     var key = event.key
     // check against random letter
-    if(key === computerChosenLetter){
+    if(key === computerChosenLetter || numGuessesLeft === 0){
         alert('you are right!')
         wins++
         document.getElementById('wins').innerHTML = wins
@@ -37,3 +37,4 @@ document.addEventListener('keypress', function(event){
     document.getElementById('guesses-made').innerHTML = guessesMade
     document.getElementById('num-guesses-left').innerHTML = numGuessesLeft
 })
+
